@@ -19,7 +19,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import CarCard from "@/components/car-card";
+import {CarCard} from "@/components/car-card";
 
 export function CarListings() {
   const searchParams = useSearchParams();
