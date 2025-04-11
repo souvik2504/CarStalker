@@ -227,7 +227,7 @@ export function CarDetails({ car, testDriveInfo }) {
                     for 60 months
                   </div>
                   <div className="text-xs text-gray-500 mt-1">
-                    *Based on $0 down payment and 4.5% interest rate
+                    *Based on ₹0 down payment and 4.5% interest rate
                   </div>
                 </CardContent>
               </Card>
