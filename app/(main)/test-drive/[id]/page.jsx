@@ -5,7 +5,7 @@ import { TestDriveForm } from "./-components/test-drive-form";
 
 export async function generateMetadata() {
   return {
-    title: `Book Test Drive | Vehiql`,
+    title: `Book Test Drive | CarStalker`,
     description: `Schedule a test drive in few seconds`,
   };
 }
