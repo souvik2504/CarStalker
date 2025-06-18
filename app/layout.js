@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/components/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
+import PageLoader from "@/components/pageLoader";
+import ChatBotWidget from "@/components/ChatBotWidget";
 // import { Icon, icons } from "lucide-react";
 
 
@@ -23,6 +25,8 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
 
         <Header/>
+        <PageLoader />
+        <ChatBotWidget />
         <main className="min-h-screen">{children}</main>
         <Toaster richColors/>
 
