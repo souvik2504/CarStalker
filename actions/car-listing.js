@@ -302,6 +302,8 @@ export async function getCarById(carId) {
     }
 
     // Check if user has already booked a test drive for this car
+    let userTestDrive = null;
+    if(dbUser){
     const existingTestDrive = await db.testDriveBooking.findFirst({
       where: {
         carId,
@@ -313,7 +315,6 @@ export async function getCarById(carId) {
       },
     });
 
-    let userTestDrive = null;
 
     if (existingTestDrive) {
       userTestDrive = {
@@ -322,6 +323,7 @@ export async function getCarById(carId) {
         bookingDate: existingTestDrive.bookingDate.toISOString(),
       };
     }
+  }
 
     // Get dealership info for test drive availability
     const dealership = await db.dealershipInfo.findFirst({
